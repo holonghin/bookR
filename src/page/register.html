@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/register.css">
+</head>
+<body>
+    <div class="register-container">
+        <h2>Book Rental System Registration</h2>
+        <form id="register-form">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" />
+            <span id="first-name-warning" class="warning">Required.</span>
+        
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" />
+            <span id="last-name-warning" class="warning">Required.</span>
+        
+            <label for="username">Username:</label>
+            <input type="text" id="username" />
+            <span id="username-warning" class="warning">Required.</span>
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" />
+            <span id="password-warning" class="warning">Must be at least 8 characters.</span>
+        
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" />
+            <span id="confirm-password-warning" class="warning">Not Match!!!</span>
+            
+            <div id="button-container"></div>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+    <script src="../js/register.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>
