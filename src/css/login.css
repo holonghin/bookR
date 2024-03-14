@@ -44,3 +44,9 @@ body {
 .login-container button:hover {
     opacity: 0.8;
 }
+
+.login-container p[id$="-warning"] {
+    font-size: 0.8em;
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
