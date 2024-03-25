@@ -12,33 +12,29 @@ window.onload = function() {
     loginForm.onsubmit = function(e) {
         e.preventDefault();
         var isValid = false;
-
-        if (usernameInput.value.trim() === '') {
-            usernameWarning.style.display = 'inline';
-            isValid = false;
+        if(usernameInput.value.trim() === ''||passwordInput.value.trim() === ''){
+            if (usernameInput.value.trim() === '') {
+                usernameWarning.style.display = 'inline';
+            } 
+    
+            if (passwordInput.value.trim() === '') {
+                passwordWarning.style.display = 'inline';
+            } 
         } else {
             usernameWarning.style.display = 'none';
-        }
-
-        if (passwordInput.value.trim() === '') {
-            passwordWarning.style.display = 'inline';
-            isValid = false;
-        } else {
             passwordWarning.style.display = 'none';
-        }
-
-        for (var i = 0; i < users.length; i++) {
-            if (users[i].username === usernameInput.value && users[i].password === passwordInput.value) {
-                isValid = true;
-                break;
+            for (var i = 0; i < users.length; i++) {
+                if (users[i].username === usernameInput.value && users[i].password === passwordInput.value) {
+                    isValid = true;
+                    break;
+                }
             }
-        }
-
-        if (isValid) {
-            window.location.href = 'home.html'; 
-            allWarning.style.display = 'none';
-        } else {
-            allWarning.style.display = 'inline';
+            if (isValid) {
+                window.location.href = 'home.html'; 
+                allWarning.style.display = 'none';
+            } else {
+                allWarning.style.display = 'inline';
+            }
         }
     };
         var loginButton = document.createElement('button');
