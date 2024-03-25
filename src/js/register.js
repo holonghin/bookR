@@ -16,6 +16,8 @@ window.onload = function() {
     var passwordWarning = document.getElementById('password-warning');
     var confirmPasswordWarning = document.getElementById('confirm-password-warning');
 
+    var users = [];
+
     registerForm.onsubmit = function(e) {
         e.preventDefault();
         var isValid = true;
@@ -56,6 +58,12 @@ window.onload = function() {
         }
 
         if (isValid) {
+            users.push({
+                fistname: firstNameInput.value,
+                lastname: lastNameInput.value,
+                username: usernameInput.value,
+                password: passwordInput.value
+            });
             alert('Registration success');
             window.location.href = 'login.html';
         }

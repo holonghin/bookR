@@ -25,6 +25,11 @@
         th, td {
             padding: 15px;
         }
+        .logout-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
     </style>
     
     <h1>Renting Records</h1>
@@ -46,5 +51,18 @@
         </tr>
         <!-- Add more rows here -->
     </table>
+    <button id="logout-button" class="logout-button">Logout</button>
+    <script>
+        window.onload = function() {
+            var logoutButton = document.getElementById('logout-button');
+
+            logoutButton.onclick = function() {
+                // Clear the user's session or remove the user's token here
+
+                // Redirect the user to the login page
+                window.location.href = 'login.html'; // replace 'login.html' with the path to your login page
+            };
+        };
+    </script>
 </body>
 </html>
